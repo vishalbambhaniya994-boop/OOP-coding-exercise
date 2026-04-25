@@ -16,22 +16,23 @@ public class RandomTextDisplay extends Application {
     @Override
     public void start(Stage stage) {
 
-        VBox vbox = new VBox(15); // spacing between texts
-        vbox.setAlignment(Pos.CENTER); // center horizontally
+        VBox vbox = new VBox(15); 
+        vbox.setAlignment(Pos.CENTER); 
+
 
         Random rand = new Random();
 
         for (int i = 1; i <= 5; i++) {
             Text text = new Text("Text " + i);
 
-            // Set font: Times New Roman, Bold + Italic, size 22
+            
             text.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 22));
 
-            // Random color
+            
             Color color = Color.color(rand.nextDouble(), rand.nextDouble(), rand.nextDouble());
             text.setFill(color);
 
-            // Random opacity between 0.3 and 1.0
+            
             double opacity = 0.3 + (rand.nextDouble() * 0.7);
             text.setOpacity(opacity);
 
