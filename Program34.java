@@ -16,19 +16,19 @@ public class RegistrationForm extends Application {
     @Override
     public void start(Stage stage) {
 
-        // Layout
+        
         GridPane grid = new GridPane();
         grid.setPadding(new Insets(20));
         grid.setHgap(10);
         grid.setVgap(10);
 
-        // Fields
+        
         TextField rollField = new TextField();
         TextField nameField = new TextField();
         TextField ageField = new TextField();
         TextField emailField = new TextField();
 
-        // Labels
+        
         grid.add(new Label("Roll No:"), 0, 0);
         grid.add(rollField, 1, 0);
 
@@ -41,13 +41,13 @@ public class RegistrationForm extends Application {
         grid.add(new Label("Email:"), 0, 3);
         grid.add(emailField, 1, 3);
 
-        // Submit Button
+        
         Button submitBtn = new Button("Submit");
         grid.add(submitBtn, 1, 4);
 
         submitBtn.setOnAction(e -> {
             try {
-                // Validation
+                
                 int rollNo = Integer.parseInt(rollField.getText());
                 int age = Integer.parseInt(ageField.getText());
                 String name = nameField.getText();
@@ -57,7 +57,7 @@ public class RegistrationForm extends Application {
                     throw new Exception("Invalid email format!");
                 }
 
-                // Save to file using FileChooser
+                
                 FileChooser fc = new FileChooser();
                 fc.setTitle("Save Registration Data");
                 fc.getExtensionFilters().add(
@@ -74,7 +74,7 @@ public class RegistrationForm extends Application {
                     bw.close();
                 }
 
-                // Success Alert
+                
                 Alert success = new Alert(Alert.AlertType.INFORMATION);
                 success.setTitle("Success");
                 success.setHeaderText("Registration Successful");
@@ -85,7 +85,7 @@ public class RegistrationForm extends Application {
                 success.showAndWait();
 
             } catch (NumberFormatException ex) {
-                // Numeric validation error
+                
                 Alert error = new Alert(Alert.AlertType.ERROR);
                 error.setTitle("Error");
                 error.setHeaderText("Invalid Input");
@@ -93,7 +93,7 @@ public class RegistrationForm extends Application {
                 error.showAndWait();
 
             } catch (Exception ex) {
-                // Other validation errors
+                
                 Alert error = new Alert(Alert.AlertType.ERROR);
                 error.setTitle("Error");
                 error.setHeaderText("Validation Failed");
