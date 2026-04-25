@@ -1,4 +1,4 @@
-// Thread T1: prints 1 to 100
+
 class T1 extends Thread {
     public void run() {
         for (int i = 1; i <= 100; i++) {
@@ -7,7 +7,7 @@ class T1 extends Thread {
     }
 }
 
-// Thread T2: prints 101 to 200
+
 class T2 extends Thread {
     public void run() {
         for (int i = 101; i <= 200; i++) {
@@ -16,7 +16,7 @@ class T2 extends Thread {
     }
 }
 
-// Thread T3: prints 201 to 300
+
 class T3 extends Thread {
     public void run() {
         for (int i = 201; i <= 300; i++) {
@@ -25,7 +25,6 @@ class T3 extends Thread {
     }
 }
 
-// Main class
 public class Main {
     public static void main(String[] args) {
 
@@ -34,15 +33,15 @@ public class Main {
         T3 t3 = new T3();
 
         try {
-            // Start and complete T1 first
+            
             t1.start();
             t1.join();
 
-            // Then T2
+            
             t2.start();
             t2.join();
 
-            // Then T3
+            
             t3.start();
             t3.join();
 
