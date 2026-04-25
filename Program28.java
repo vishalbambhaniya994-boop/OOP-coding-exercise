@@ -17,13 +17,13 @@ public class DataFileAnalysis {
             while ((line = br.readLine()) != null) {
                 lineCount++;
 
-                // Count words
+                
                 String[] words = line.trim().split("\\s+");
                 if (!line.trim().isEmpty()) {
                     wordCount += words.length;
                 }
 
-                // Count characters (excluding spaces)
+                
                 for (int i = 0; i < line.length(); i++) {
                     if (line.charAt(i) != ' ') {
                         charCount++;
@@ -31,7 +31,7 @@ public class DataFileAnalysis {
                 }
             }
 
-            // Display results
+            
             System.out.println("Total Lines: " + lineCount);
             System.out.println("Total Words: " + wordCount);
             System.out.println("Total Characters (excluding spaces & newlines): " + charCount);
