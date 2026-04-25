@@ -1,9 +1,9 @@
-// Interface
+
 interface Classify {
     String getDivision(double average);
 }
 
-// Implementing class
+
 class Result implements Classify {
 
     @Override
@@ -16,13 +16,13 @@ class Result implements Classify {
     }
 }
 
-// Main class
+
 public class Main {
     public static void main(String[] args) {
 
         Result result = new Result();
 
-        System.out.println(result.getDivision(72)); // First Division
-        System.out.println(result.getDivision(55)); // Below First Division
+        System.out.println(result.getDivision(72));
+        System.out.println(result.getDivision(55)); 
     }
 }
