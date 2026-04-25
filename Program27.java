@@ -7,7 +7,7 @@ public class StudentFileDemo {
         BufferedReader br = null;
 
         try {
-            // Step 1: Create and write to file
+           
             fw = new FileWriter("students.txt");
 
             fw.write("101 Dharmik 85\n");
@@ -16,9 +16,9 @@ public class StudentFileDemo {
 
             System.out.println("Student records written to file.\n");
 
-            fw.close(); // close after writing
+            fw.close(); 
 
-            // Step 2: Read from file
+            
             br = new BufferedReader(new FileReader("students.txt"));
 
             String line;
@@ -31,7 +31,7 @@ public class StudentFileDemo {
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         } finally {
-            // Ensure resources are closed
+            
             try {
                 if (fw != null) fw.close();
                 if (br != null) br.close();
