@@ -1,6 +1,6 @@
 class VotingApp {
 
-    // Method to check voting eligibility
+    
     public void checkEligibility(int age) {
         if (age < 18) {
             throw new IllegalArgumentException("Age must be 18 or above to vote");
@@ -13,7 +13,7 @@ class VotingApp {
 
         VotingApp app = new VotingApp();
 
-        // Test cases
+        
         int[] ages = {16, 18, 25};
 
         for (int age : ages) {
