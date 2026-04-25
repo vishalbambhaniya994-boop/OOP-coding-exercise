@@ -3,7 +3,7 @@ import java.io.*;
 public class FileCounter {
     public static void main(String[] args) {
 
-        // Check if filename is provided
+        
         if (args.length == 0) {
             System.out.println("Please provide a file name as a command-line argument.");
             return;
@@ -22,17 +22,17 @@ public class FileCounter {
             while ((line = br.readLine()) != null) {
                 lineCount++;
 
-                // Count characters (excluding newline)
+                
                 charCount += line.length();
 
-                // Count words (split by whitespace)
+              
                 String[] words = line.trim().split("\\s+");
                 if (!line.trim().isEmpty()) {
                     wordCount += words.length;
                 }
             }
 
-            // Display results
+            
             System.out.println("File: " + fileName);
             System.out.println("Lines: " + lineCount);
             System.out.println("Words: " + wordCount);
