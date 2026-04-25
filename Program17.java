@@ -14,7 +14,7 @@ class Result implements Exam, Classify {
     
     @Override
     public boolean isPassed(int mark) {
-        return mark >= 40; // passing criteria
+        return mark >= 40; 
     }
 
     
