@@ -10,9 +10,9 @@ import javafx.stage.Stage;
 
 public class GradeBarChart extends Application {
 
-    // Method to create a bar with label
+    
     private VBox createBar(String label, int percentage, Color color) {
-        double heightFactor = 3; // scale factor for visibility
+        double heightFactor = 3;
 
         Rectangle bar = new Rectangle(50, percentage * heightFactor);
         bar.setFill(color);
@@ -29,13 +29,13 @@ public class GradeBarChart extends Application {
     @Override
     public void start(Stage stage) {
 
-        // Create bars
+        
         VBox projects = createBar("Projects", 20, Color.RED);
         VBox quizzes = createBar("Quizzes", 10, Color.BLUE);
         VBox midterm = createBar("Midterm Exams", 30, Color.GREEN);
         VBox finalExam = createBar("Final Exam", 40, Color.ORANGE);
 
-        // Arrange bars horizontally
+        
         HBox root = new HBox(20);
         root.setAlignment(Pos.BOTTOM_CENTER);
         root.getChildren().addAll(projects, quizzes, midterm, finalExam);
